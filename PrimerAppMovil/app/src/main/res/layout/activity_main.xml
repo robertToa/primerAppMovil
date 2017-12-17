@@ -10,12 +10,13 @@
         android:id="@+id/button"
         android:layout_width="110dp"
         android:layout_height="41dp"
-        android:text="@string/button_send"
-        app:layout_constraintLeft_toRightOf="@+id/editText"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText" />
+        android:onClick="sendMessage"
+        android:text="@string/button_send"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        app:layout_constraintLeft_toRightOf="@+id/editText"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
         android:id="@+id/editText"
