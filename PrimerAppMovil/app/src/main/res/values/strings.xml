@@ -2,4 +2,9 @@
     <string name="app_name">PrimerAppMovil</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="lema">E  scientia  hominis  salus</string>
+    <string name="button_historia">Historia</string>
+    <string name="button_Detalle">Detalle</string>
+    <string name="button_Contacto">Contacto</string>
+    <string name="button_Ventana2">Ventana Imagen</string>
 </resources>

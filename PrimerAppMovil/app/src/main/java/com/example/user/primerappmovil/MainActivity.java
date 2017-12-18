@@ -25,4 +25,12 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE,message);
         startActivity(intent);
     }
+
+    public void VentanaImagen(View view){
+        Intent intent =new Intent(this,DisplayImageActivity.class);
+        //EditText editTex = (EditText)findViewById(editText);
+        //String message = editTex.getText().toString();
+        //intent.putExtra(EXTRA_MESSAGE,message);
+        startActivity(intent);
+    }
 }
