@@ -7,4 +7,6 @@
     <string name="button_Detalle">Detalle</string>
     <string name="button_Contacto">Contacto</string>
     <string name="button_Ventana2">Ventana Imagen</string>
+    <string name="button_last_value">Last</string>
+    <string name="lastvalue">None</string>
 </resources>
