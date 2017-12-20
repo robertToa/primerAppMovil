@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
+
         editor.putString(getString(R.string.lastvalue), message);
         editor.commit();
 
@@ -36,11 +37,30 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void saveKeyValue(View view) {
+        Intent intent = new Intent(this, LoadKeyValue.class);
+        EditText editText = (EditText) findViewById(R.id.editText);
+        String message = editText.getText().toString();
+
+        SharedPreferences sharedPref2 = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor2 = sharedPref2.edit();
+
+        editor2.putString(getString(R.string.lastvalue), message);
+        editor2.commit();
+        startActivity(intent);
+    }
+
     public void lastValue(View view) {
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         String lastValue = sharedPref.getString(getString(R.string.lastvalue),"None");
-        TextView textView= (TextView) findViewById(R.id.textView);
+        TextView textView = (TextView) findViewById(R.id.textView3);
         textView.setText(lastValue);
+
+        /*SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        String lastValue = sharedPref.getString(getString(R.string.lastvalue),"None");
+        TextView textView= (TextView) findViewById(R.id.textView3);
+        textView.setText(lastValue);*/
     }
 
 
@@ -51,4 +71,8 @@ public class MainActivity extends AppCompatActivity {
         //intent.putExtra(EXTRA_MESSAGE,message);
         startActivity(intent);
     }
+
+
+
+
 }
